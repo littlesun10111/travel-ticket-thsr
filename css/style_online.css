@@ -1,0 +1,1217 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap');
+
+@font-face {
+    font-family: 'HunInn';
+    src: url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.eot); /* IE9 Compat Modes */
+	src: url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.eot?#iefix) format("embedded-opentype"), /* IE6-IE8 */
+	url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.woff) format("woff"), /* Modern Browsers */
+	url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.ttf) format("truetype"), /* Safari, Android, iOS */
+	url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.svg#SealmemoryHeader) format("svg"); /* Legacy iOS */
+}
+
+body, button, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, input, select, textarea {
+    font-family:  'HunInn',"微軟正黑體", "微软雅黑","Helvetica Neue", Helvetica, Arial,"メイリオ", "맑은 고딕", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+body {
+    font-size: 1rem;
+    color: var(--basic-txt);
+    background: var(--main-color);
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 ,p,label{
+    margin-bottom: 0;
+}
+
+ul,ol{
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width:1199px) {
+    h1, .h1 {
+        font-size: calc(1.2rem + 2vw);
+        /* RFS */
+    }
+}
+
+@media screen and (max-width:991px) {
+
+    /* body {
+        font-size: 0.875rem;
+    } */
+    h1, .h1 {
+        font-size: 2rem;
+    }
+
+    h2, .h2 {
+        font-size: 1.75rem;
+    }
+
+    h3, .h3 {
+        font-size: 1.5rem;
+    }
+
+    h4, .h4 {
+        font-size: 1.25rem;
+    }
+
+    h5, .h5 {
+        font-size: 1rem;
+    }
+
+    /* h6, .h6 {
+        font-size: 0.875rem;
+    } */
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+.content-fluid {
+    /* container-fluid */
+    position: relative;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contentbox {
+    /* container */
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contentbox_main {
+    position: relative;
+    padding: var(--content-p) 10px 0;
+    text-align: center;
+    z-index: 10;
+}
+
+@media screen and (min-width: 576px) {
+    .contentbox {
+        max-width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contentbox {
+        max-width: 720px;
+    }
+
+    .contentbox_main {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .contentbox {
+        max-width: 960px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .contentbox {
+        max-width: 1140px;
+    }
+}
+
+.rowline {
+    /* row */
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/*-------------------- 共用樣式 --------------------*/
+
+:root {
+    --basic-txt: #212121;
+    --gray-light: #edf1f0;
+    --main-ye: #eb9d00;
+    --ye-light: #f5ff00;
+    --ye-deep: #b45d00;
+    --main-og: #f9437e;
+    --og-deep: #df084e;
+    --main-light: #03c8d8;
+    --main-color: #ddf3ff;
+    --main-deep: #0a40ab;
+    --sec-top-margin: 2.6rem;
+    --content-p: 5rem;
+    --transition-com: all 0.25s ease;
+}
+
+strong {
+    font-weight: 600 !important;
+}
+
+.txt-ye {
+    color: var(--ye-light);
+}
+
+/*-- 區塊陰影 --*/
+
+.sec-shadow {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/*-- 標題與區塊重疊樣式 --*/
+
+.sec-top-margin {
+    margin-top: -2.5rem;
+    /* padding-top: var(--sec-top-margin); */
+}
+
+/*-- 重要底線 --*/
+
+.under-line {
+    border-bottom: 3px solid var(--main-color01);
+}
+
+.material-icons {
+    vertical-align: text-top;
+}
+
+/*-------------------- 共用樣式 END --------------------*/
+
+/*-------------------- 主視覺 --------------------*/
+
+#main_top>h1 {
+    display: block;
+    max-width: 0;
+    max-height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 1px;
+    padding: 0;
+    margin: 0;
+}
+
+#main_top {
+    width: 100%;
+    height: 0;
+    padding-bottom: 450px;
+    position: relative;
+    background: url(https://event.cdn-eztravel.com.tw/events/travelfair/2022/header_1920x408.jpg) no-repeat center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 991px) {
+    #main_top {
+        padding-bottom: 300px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #main_top {
+        padding-bottom: 52.1%;
+        background: url(https://event.cdn-eztravel.com.tw/events/travelfair/2022/header_768x400.jpg) no-repeat center;
+        background-size: cover;
+    }
+}
+
+/*-------------------- 主視覺 END --------------------*/
+
+/*-------------------- NAV --------------------*/
+
+.nav_bar {
+    padding: 0;
+    background: var(--main-deep);
+}
+
+.nav_bar ul.rowline {
+    display: flex;
+    justify-content: center;
+    padding-inline-start: 0;
+}
+
+.nav_bar ul.rowline>li {
+    display: inline-block;
+    text-align: center;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+    /* -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%; */
+    transition: var(--transition-com);
+}
+
+.nav_bar ul.rowline>li:hover {
+    transform: translateY(-3px);
+    text-shadow: 1px 5px 2px rgba(0, 0, 0, 0.3);
+    color: var(--ye-light);
+}
+
+@media screen and (max-width:991px) {
+    .nav_bar ul.rowline>li {
+        font-size: 1.125rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .nav_bar .material-icons {
+        vertical-align: sub;
+        font-size: 110%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .nav_bar ul.rowline>li {
+        font-weight: 400;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav_bar .material-icons {
+        vertical-align: middle;
+    }
+}
+
+/*-------------------- NAV END --------------------*/
+
+
+/*-------------------- 全頁 --------------------*/
+
+#wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/*-- 標題字級 --*/
+
+h1 {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+    z-index: 100;
+}
+
+@media screen and (max-width:991px) {
+    h1>img {
+        zoom: 0.85;
+    }
+}
+
+@media screen and (max-width:767px) {
+    h1>img {
+        zoom: 0.7;
+    }
+}
+
+h2 {
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+}
+
+h2>.material-icons {
+    font-size: 2.2rem;
+}
+
+.font-noto {
+    font-family: 'Noto Sans TC', "微軟正黑體", "微软雅黑", sans-serif;
+}
+
+/*-- 按鈕 --*/
+
+
+.btn>img {
+    vertical-align: middle;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: var(--main-og);
+    border-color: var(--main-og);
+}
+
+.btn-danger:hover {
+    background-color: var(--og-deep);
+    border-color: var(--og-deep);
+}
+
+.btn-lg {
+    padding: 0.6rem 1.6rem;
+    font-weight: 600;
+    color: #fff !important;
+}
+
+@media screen and (max-width:991px) {
+    .btn-lg {
+        font-size: 1.125rem;
+    }
+}
+
+/*-- 按鈕區域 --*/
+
+.btn-pro{
+    display: block;
+    background-color: #29bae9;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 3px 0 #0079c8;
+    transition: 300ms ease-in-out;
+}
+
+.btn-pro:hover,
+.btn-pro:focus{
+    background-color: #0079c8;
+    color: #fff;
+    box-shadow: none;
+    transform: translateY(3px);
+    text-shadow: -1px -1px 0 #666;
+}
+
+/*-------------------- 全頁 END --------------------*/
+
+/*-------------------- format start --------------------*/
+.wrapper{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+[class*="section__"]{
+    padding: 40px 0;
+}
+
+[class*="block"]{
+    padding: 0 15px;
+}
+
+[class*="__title"]{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+[class*="__title"] h2{
+    width: fit-content;
+}
+
+[class*="__title"] img{
+    display: block;
+    position: relative;
+    margin-top: -1px;
+    max-height: 60px;
+}
+
+[class*="__title"] span{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 101%;
+    display: block;
+    position: relative;
+    z-index: -1;
+}
+
+@media screen and (min-width:768px) {
+    [class*="section__"]{
+        padding: 60px 0;
+    }
+
+    [class*="__title"]{
+        padding-bottom: 40px;
+    }
+
+    [class*="__title"] img{
+        max-height: initial;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    [class*="section__"]{
+        padding: 80px 0;
+    }
+
+    [class*="__title"]{
+        padding-bottom: 60px;
+    }
+
+}
+
+/*-------------------- format end --------------------*/
+
+/*-------------------- 3大優惠 #thsr_discount --------------------*/
+.section__discount{
+    background: url(https://event.cdn-eztravel.com.tw/events/travel-ticket-thsr/wave-up-bg.png) no-repeat bottom left / 100% auto;
+}
+
+.section__discount img{
+    width: 100%;
+    display: block;
+}
+
+.discount-item{
+    width: 320px;
+    box-sizing: border-box;
+    padding: 40px 20px 20px 60px;
+    margin-bottom: 20px;
+    min-height: 192px;
+    border-radius: 15px;
+    background-color: #2281bf;
+    background-image: linear-gradient(to right,  #2281bf 40px , transparent 41px) ,url(https://event.cdn-eztravel.com.tw/events/travel-ticket-thsr/coupon-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.discount-item::before,
+.discount-item::after{
+    content: '';
+    position: absolute;
+    right: -0.5rem;
+    top: calc(50% - .5rem);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #DDF3FF;
+}
+
+.discount-item::after{
+    left:-0.5rem;
+}
+
+.discount-img{
+    width: 120px;
+    position: absolute;
+    left: calc(50% - 60px);
+    top: -80px;
+    filter: drop-shadow(0 15px 10px #0006);
+    animation: float-ini 2s  infinite linear ;
+}
+
+.discount-item:nth-child(2) .discount-img{
+    animation-delay: -0.5s;
+}
+
+.discount-item:nth-child(3) .discount-img{
+    animation-delay: -0.75s;
+}
+
+.item__txt{
+    flex-grow: 1;
+}
+
+.item__txt h3{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.item__txt span{
+    display: block;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.item__txt small{
+    font-size: 1rem;
+    color: #fcc701;
+    font-weight: 600;
+}
+
+@keyframes float-ini {
+    0%{
+        transform: translateY(-5px);
+    }
+    25%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+
+@media screen and (min-width:768px) {
+    .discount-group{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .discount-item{
+        width: 48%;
+        margin-top: 80px;
+        min-height: 212px;
+    }
+
+    .discount-item:last-child{
+        margin-left: initial;
+    }
+
+    .discount-img{
+        width: 140px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .discount-group{
+        padding-top: 24px;
+    }
+
+    .discount-item{
+        width: 30%;
+        margin-top: 60px;
+    }
+
+    .discount-item:last-child{
+        margin-left: auto;
+    }
+
+    .discount-img{
+        top: -90px;
+    }
+}
+/*-------------------- 3大優惠 #thsr_discount end --------------------*/
+
+/*-------------------- 訂購流程 #thsr_order --------------------*/
+
+.section__order{
+    background: url(https://event.cdn-eztravel.com.tw/events/travel-ticket-thsr/wave-down-bg.png) no-repeat top left / 100% auto;
+}
+
+.order-descr{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.order-txt{
+    display: inline-block;
+    padding: .5rem 1rem;
+    background-color: #fff;
+    border-radius: 87px;
+    padding-left: 3rem;
+    position: relative;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.order-txt:before{
+    content: '';
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fcc701;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.order-txt:after{
+    content: '\2714';
+    font-size: 2.5rem;
+    position: absolute;
+    top: -0.75rem;
+    left: .5rem;
+}
+
+.order-txt + .order-txt{
+    margin-top: 0.8rem;
+}
+
+.order-item{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.order-item:first-child{
+    margin-bottom: 40px;
+}
+
+.order-item:nth-child(4){
+    margin-bottom: 50px;
+}
+
+.order-item:last-child{
+    margin-bottom: 0;
+}
+
+.circle{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ddf3ff;
+    background-image: linear-gradient(45deg , #7291bb 25%, 
+    transparent 25%, 
+    transparent 50%, 
+    #7291bb 50%, 
+    #7291bb 75%, 
+    transparent 75%, 
+    transparent); 
+    background-size: 8px 8px;
+    position: relative;
+    flex-basis: 100px;
+}
+
+.circle:before{
+    content: '';
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ddf3ff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.circle:after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: #ddf3ff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 0 0 50px 0;
+}
+
+.ordinal-num{
+    font-size: 4rem;
+    position: relative;
+    font-weight: 600;
+    padding-left: 1.875rem;
+    z-index: 2;
+}
+
+.order-item p{
+    width: calc(100% - 100px);
+    box-sizing: border-box;
+    font-size: 1.75rem;
+    padding-top: 60px;
+}
+
+@media screen and (min-width:768px) {
+    .order-descr{
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+
+    .order-step{
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .order-item:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
+    .order-item:nth-child(even) .circle:after{
+        left: 0;
+    }
+
+    .order-item:nth-child(even) .ordinal-num{
+        padding-left: initial;
+        padding-right: 1.5rem;
+    }
+
+    .order-item:nth-child(even) {
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    .order-item:first-child,
+    .order-item:nth-child(4){
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .order-descr{
+        max-width: initial;
+        background-color: initial;
+        border-radius: 0;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .order-txt{
+        width: 32%;
+        font-size: 1.1rem;
+    }
+
+    .order-txt + .order-txt{
+        margin-top: 0;
+    }
+
+    .order-step{
+        flex-direction: row;
+        flex-wrap:wrap ;
+        max-width: initial;
+    }
+
+    .order-item{
+        width: 24%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    .order-item:nth-child(even){
+        flex-direction: initial;
+    }
+
+    .order-item:nth-child(even) .circle:after{
+        left: unset;
+    }
+
+    .order-item:nth-child(even) .ordinal-num{
+        padding-left: 1.875rem;
+        padding-right: initial;
+    }
+
+    .order-item:nth-child(even) {
+        justify-content: flex-start;
+        text-align: initial;
+    }
+
+    .circle:after{
+        border-radius: 0 0 50px 0;
+    }
+
+}
+
+/*-------------------- 訂購流程 #thsr_order end --------------------*/
+
+/*-------------------- 熱銷推薦 #thsr_bestseller --------------------*/
+.section__bestSeller{
+    background: url(https://event.cdn-eztravel.com.tw/events/travel-ticket-thsr/blue-dot-bg.png) no-repeat bottom center / 100%;
+}
+
+.product-item img{
+    width: 100%;
+}
+
+.product-item{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 11.5px 1.2px #0006;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.product-content{
+    padding: 0.875rem;
+}
+
+.product-content h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1rem;
+}
+
+.product-content h3:before,
+.product-content h3:after{
+    content: '';
+    width: calc(100% - 16px);
+    height: 20px;
+    background-color: #f9be00;
+    position: absolute;
+    bottom: 50%;
+    left: 8px;
+    z-index: -1;
+}
+
+.product-content h3:after{
+    width: 45px;
+    bottom: 0;
+}
+
+.product-item:nth-child(1) .product-content h3:after{
+    width: 0;
+}
+
+.product-item:nth-child(1) .product-content h3:before{
+    top: 50%;
+}
+
+.product-item:nth-child(2) .product-content h3:after{
+    width: 20px;
+    bottom: 0;
+}
+
+.product-item:nth-child(3) .product-content h3:after{
+    width: 120px;
+    bottom: 0;
+}
+
+.product-content p{
+    font-size: 1.2rem;
+    position: relative;
+    padding-left: 1.875rem;
+    line-height: 1.5;
+}
+
+.product-content p:before{
+    content: '\2714';
+    font-size: 1.875rem;
+    position: absolute;
+    top: -.5rem;
+    left: 0;
+}
+
+.product-meta{
+    padding-top: 1.5rem;
+    text-align: right;
+}
+
+.product-price-num{
+    font-size: 2.5rem;
+    color: #f9be00;
+    padding-right: 0.5rem;
+}
+
+@media screen and (min-width:768px) {
+    .product-group{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product-item{
+        width: 48%;
+    }
+
+    .product-item:nth-child(2){
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .product-group{
+        justify-content: space-between;
+    }
+
+    .product-item{
+        width: 30%;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-content{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .product-meta{
+        margin-top: auto;
+    }
+
+    .product-item:nth-child(2){
+        margin-left: initial;
+    }
+
+}
+
+/*-------------------- 熱銷推薦 #thsr_bestseller end --------------------*/
+
+/*-------------------- Ｑ＆Ａ #thsr_faq --------------------*/
+.section__faq{
+    background: url(https://event.cdn-eztravel.com.tw/events/travel-ticket-thsr/summer-bg.png)  fixed top center / contain;
+    /* font-family:  'MElleHK Medium',"微軟正黑體", "微软雅黑","Helvetica Neue", Helvetica, Arial,"メイリオ", "맑은 고딕", sans-serif; */
+}
+
+.faq-navbar{
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 2px dashed #999;
+    border-bottom: 2px dashed #999;
+    margin-bottom: 1.5rem;
+}
+
+.li-for-panel{
+    padding: 0.5rem 1rem;
+    transition: 300ms ease-in;
+}
+
+.li-for-panel.active{
+    background: linear-gradient(to bottom ,  #fff 90%,  #f9be00 90.5%);
+    position: relative;
+}
+
+.li-for-panel.active:before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 7.5px);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 7.5px 0 7.5px;
+    border-color: #f9be00 transparent transparent transparent;
+}
+
+.panel-label{
+    font-size: 0.9rem;
+}
+
+.faq-item:not(:first-child){
+    margin-top: 1.5rem;
+}
+
+.faq__head{
+    background-color: #29bae9;
+    padding: .5rem;
+    box-shadow: 0 3px 0 #0079c8;
+    border-radius: 21px;
+    position: relative;
+    z-index: 1;
+}
+
+.faq__head p{
+    color: #fff;
+    font-size: 1.125rem;
+    display: block;
+    padding: 0 30px 0 16px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+}
+
+.faq__head p:before,
+.faq__head p:after{
+    content: '';
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    right: 5px;
+    top: calc(50% - 1.5px);
+    transition: transform 300ms ease-in;
+}
+
+.faq__head p:after{
+    transform: rotate(90deg);
+}
+
+.faq__head.is__open p:after{
+    transform: rotate(180deg);
+}
+
+.faq__body{
+    border: 1px solid #0079c8;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 40px 1rem 1rem;
+    margin-top: -30px;
+    border-radius: 15px;
+    display: none;
+}
+
+.tab-content{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-pane{
+    display: none;
+}
+
+.panel-radios{
+    margin-left: -9999px;
+}
+
+#order_ticket:checked ~ .tab-content .faq-pane:nth-child(1),
+#modify_ticket:checked ~ .tab-content .faq-pane:nth-child(2),
+#concession_ticket:checked ~ .tab-content .faq-pane:nth-child(3){
+    display: block;
+}
+
+@media screen and (min-width:768px) {
+    .panel-label{
+        font-size: 1rem;
+    }
+}
+
+/*-------------------- Ｑ＆Ａ #thsr_faq end--------------------*/
+
+/*-------------------- 注意事項 #thsr_note --------------------*/
+
+
+
+.note_list {
+    background: url(https://event.cdn-eztravel.com.tw/events/travelfair/2022/note_icon01.png) no-repeat left 3px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.note_list_content {
+    background: url(https://event.cdn-eztravel.com.tw/events/travelfair/2022/note_icon02.png) no-repeat left 6px;
+    padding-left: 20px;
+}
+
+.note_content_item {
+    background: url(https://event.cdn-eztravel.com.tw/events/travelfair/2022/note_icon02.png) no-repeat left 7px;
+    padding-left: 15px;
+    font-size: 0.9375rem;
+    margin-bottom: 2px;
+}
+
+#btn_app {
+    position: fixed;
+    right: 5px;
+    bottom: calc(60px + 95px + 5px);
+    z-index: 999;
+}
+
+#btn_top {
+    position: fixed;
+    right: 5px;
+    z-index: 999;
+}
+
+@media screen and (max-width:767px) {
+
+    #btn_top, #btn_app {
+        right: 0;
+    }
+}
+
+.section__note{
+    background-color: #efefef;
+}
+
+.section__note img{
+    width: 100%;
+}
+
+.note_case:not(:last-child){
+    margin-bottom: 30px;
+}
+
+.note_case h3{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.note-item{
+    padding-bottom: 0.5rem;
+    display: flex;
+}
+
+.note-sub-txt,
+.note-subItem{
+    width: calc(100% - 100px);
+    flex-grow: 1;
+}
+
+.note-subItem li{
+    padding-bottom: 0.5rem;
+}
+
+ol.note-subItem li{
+    list-style: decimal inside;
+}
+
+.note-sub-txt span,
+.condition{
+    color: #c10c4f;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.download-app{
+    border-top: 2px dashed #999;
+    border-bottom: 2px dashed #999;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.download-app h4{
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.app-link{
+    padding-bottom: .5rem;
+}
+
+.app-link a{
+    display: inline-block;
+    width: calc(50% - 7.5px);
+}
+
+@media screen and (min-width:768px){
+    .note__content{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .note_case h3{
+        font-size: 1.875rem;
+        padding-bottom: 1.875rem;
+    }
+
+    .note-item{
+        padding-bottom: 1rem;
+    }
+
+    .app-link{
+        padding-bottom: 1rem;
+    }
+
+    .app-link a{
+        max-width: 180px;
+    }
+}
+
+/* @media screen and (max-width:992px) {
+    .app-link{
+        display: none;
+    }
+} */
